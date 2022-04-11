@@ -418,16 +418,10 @@ header > div > .nav .li .a:hover::before {
 
 @media (min-width: 768px) {
     .landing > div .image {
-        display: none;
     }
     .landing > div .text {
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
     }
     .landing > div .text p {
-        width: 50%;
-        margin: 0 auto;
     }
 }
 
@@ -882,14 +876,14 @@ header > div > .nav .li .a:hover::before {
     display: block;
 }
 
-.ourskills > div .box .data span + div {
+.ourskills > div .box .data .line {
     height: 30px;
     background-color: #eee;
     margin: 10px 0;
     position: relative;
 }
 
-.ourskills > div .box .data span + div::before {
+.ourskills > div .box .data .line::before {
     content: '';
     position: absolute;
     top: 0;
@@ -899,7 +893,7 @@ header > div > .nav .li .a:hover::before {
     height: 100%;
 }
 
-.ourskills > div .box .data span + div::after {
+.ourskills > div .box .data .line::after {
     content: '80%';
     position: absolute;
     top: calc(0px - 100% - 5%);
@@ -910,6 +904,20 @@ header > div > .nav .li .a:hover::before {
     color: var(--main-color);
     font-size: 12px;
     font-weight: bold;
+}
+
+.ourskills > div .box .data .line:nth-of-type(2)::before {
+    width: 85%;
+}
+.ourskills > div .box .data .line:nth-of-type(2)::after {
+    content: '85%';
+}
+
+.ourskills > div .box .data .line:nth-of-type(3)::before {
+    width: 70%;
+}
+.ourskills > div .box .data .line:nth-of-type(3)::after {
+    content: '70%';
 }
 /* End Our Skills */
 /* Start How it Works */
@@ -1324,7 +1332,8 @@ header > div > .nav .li .a:hover::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 350px;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .discount > div .request .form-box form .input {
