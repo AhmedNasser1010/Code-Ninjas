@@ -254,25 +254,25 @@ header > div > .nav .li .a:hover::before {
 }
 
 .megamenu {
+    transition: opacity 0.5s, top 0.3s;
     position: absolute;
     background-color: white;
     width: calc(100% - 40px);
-    top: calc(100% + 50%);
+    top: calc(100% + 70px);
     opacity: 0;
-    display: none;
+    display: flex;
     left: 0px;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
     border-bottom: 3px solid var(--main-color);
-    transition: display 1s, opacty 5s;
-    z-index: 9;
+    z-index: -9;
 }
 
 .nav .li.other:hover .megamenu {
-    display: flex;
     opacity: 1;
-    top: calc(100% + 5%);
+    top: calc(100% + 1px);
+    z-index: 9;
 }
 
 .megamenu img {
@@ -401,7 +401,17 @@ header > div > .nav .li .a:hover::before {
 
 .landing > div .image img {
     max-width: 100%;
-    animation: up-and-down 5s linear infinite;
+    animation: UpDown 5s linear infinite;
+    position: relative;
+}
+
+@keyframes UpDown {
+    0%,100% {
+        top: 0px;
+    }
+    50% {
+        top: -50px;
+    }
 }
 
 .landing > div a {
@@ -414,6 +424,17 @@ header > div > .nav .li .a:hover::before {
     left: 50%;
     font-size: 30px;
     color: var(--main-color);
+    animation: arrow 1.5s infinite;
+}
+
+@keyframes arrow {
+    0%, 10%, 20%,
+    50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40%, 60% {
+        transform: translateY(-15px);
+    }
 }
 
 @media (min-width: 768px) {
@@ -459,21 +480,32 @@ header > div > .nav .li .a:hover::before {
     border-radius: 6px;
     overflow: hidden;
     background-color: white;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    transition: box-shadow 1s, transform 0.3s;
+}
+
+.art:hover {
+    transform: translateY(-10px);
     box-shadow: 0 2px 15px rgb(0 0 0 / 22%);
 }
+
 .art img {
     max-width: 100%;
 }
+
 .art .text {
     padding: 15px;
 }
+
 .art .text h3 {
     margin-bottom: 10px;
 }
+
 .art .text p {
     line-height: 1.5;
     color: var(--p-color);
 }
+
 .art .more {
     padding: 20px 15px;
     color: var(--main-color);
@@ -482,9 +514,24 @@ header > div > .nav .li .a:hover::before {
     justify-content: space-between;
     border-top: 1px solid #d6d6d6;
 }
+
 .art .more a {
     color: var(--main-color);
     font-weight: bold;
+}
+
+.art:hover .more a + i {
+    animation: arrow-2 1.5s infinite;
+}
+
+@keyframes arrow-2 {
+    0%, 10%, 20%,
+    50%, 80%, 100% {
+        transform: translateX(0);
+    }
+    40%, 60% {
+        transform: translateX(-7px);
+    }
 }
 /* End Articles */
 /* Start Gallery */
