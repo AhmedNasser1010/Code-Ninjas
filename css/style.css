@@ -38,12 +38,12 @@ a {
     text-decoration: none;
 }
 
- hr {
+hr {
     height: 0;
     width: 100%;
     border: 1px solid white;
     margin: 8px 0;
- }
+}
 
 .container {
     padding-left: 15px;
@@ -155,10 +155,29 @@ a {
     top: 15%;
     right: 1%;
 }
+
+@media (max-width: 992px) {
+    .dots.up img,
+    .dots.down img {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dots.hidden-small-screen {
+        display: none;
+    }
+}
 /* -End Dots */
 /* -Start Most Popular */
 .card.popular {
     top: -20px;
+}
+
+@media (max-width: 992px) {
+    .card.popular {
+        top: 0;
+    }
 }
 
 .popular .label {
@@ -356,7 +375,6 @@ header > div > .nav .li .a:hover::before {
     }
     .megamenu ul li a {
         padding: 15px;
-        width: 100%;
     }
 }
 /* End Header */
@@ -444,16 +462,7 @@ header > div > .nav .li .a:hover::before {
     }
 }
 
-@media (min-width: 768px) {
-    .landing > div .image {
-    }
-    .landing > div .text {
-    }
-    .landing > div .text p {
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .landing > div .image {
         display: none;
     }
@@ -613,6 +622,15 @@ header > div > .nav .li .a:hover::before {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
+}
+
+@media (max-width: 992px) {
+    .features > div .feat-box {
+        padding: 0px 20px;
+    }
+    .features > div .feat-box .feat {
+        border-width: 2px !important;
+    }
 }
 
 .features > div .feat-box .feat {
@@ -779,6 +797,16 @@ header > div > .nav .li .a:hover::before {
     padding: 20px;
 }
 
+@media (max-width: 992px) {
+    .testimonials > div .cards {
+        column-gap: 0;
+    }
+    .testimonials > div .cards .card {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
 .testimonials > div .cards .card img {
     width: 80px;
     height: 80px;
@@ -855,6 +883,30 @@ header > div > .nav .li .a:hover::before {
     transform: rotateY(1deg);
 }
 
+@media (max-width: 992px) {
+    .teammembers > div .cards {
+        column-gap: 0px;
+    }
+    .teammembers > div .cards .card::after,
+    .teammembers > div .cards .card::before {
+        right: 15px;
+        width: 75%;
+    }
+    .teammembers > div .cards .card .content {
+        margin-left: 15px;
+    }
+    .teammembers > div .cards .card .content ul {
+        margin: 0 auto;
+        margin-left: 15px !important;
+    }
+    .teammembers > div .cards .card .title {
+        padding-left: 25% !important;
+    }
+    .teammembers > div .cards .card .content img {
+        width: 280px !important;
+    }
+}
+
 .teammembers > div .cards .card .content {
     display: flex;
     align-items: center;
@@ -918,6 +970,12 @@ header > div > .nav .li .a:hover::before {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 40px;
+}
+
+@media (max-width: 992px) {
+    .services > div .cards {
+        padding: 0 15px;
+    }
 }
 
 .services .container .cards .card {
@@ -1025,6 +1083,15 @@ header > div > .nav .li .a:hover::before {
     align-items: center;
 }
 
+@media (max-width: 992px) {
+    .ourskills > div .box img {
+        display: none;
+    }
+    .ourskills > div .box .data {
+        padding: 0 15px;
+    }
+}
+
 .ourskills > div .box .data {
     flex: 1;
 }
@@ -1093,10 +1160,25 @@ header > div > .nav .li .a:hover::before {
     justify-content: space-between;
 }
 
+@media (max-width: 992px) {
+    .how-it-works > div .box img {
+        max-width: 85% !important;
+        margin: 0 auto;
+        padding-right: 0px !important;
+        padding-bottom: 20px;
+    }
+    .how-it-works > div .box {
+        flex-wrap: wrap;
+    }
+    .how-it-works > div .box .cards .card {
+        display: block !important;
+        text-align: center;
+    }
+}
+
 .how-it-works > div .box img {
     max-width: 100%;
     padding-right: 50px;
-    z-index: 2;
 }
 
 .how-it-works > div .box .cards .card {
@@ -1108,6 +1190,7 @@ header > div > .nav .li .a:hover::before {
     padding: 30px;
     margin: 20px;
     position: relative;
+    z-index: 1;
 }
 
 .how-it-works > div .box .cards .card::before {
@@ -1120,7 +1203,7 @@ header > div > .nav .li .a:hover::before {
     height: 100%;
     transform: scale(0 , 0);
     transition: var(--medium-transition);
-    z-index: 1;
+    z-index: -1;
 }
 .how-it-works > div .box .cards .card:hover::before {
     transform: scale(1, 1);
@@ -1130,10 +1213,6 @@ header > div > .nav .li .a:hover::before {
     width: 64px;
     height: 64px;
     padding: 10px 40px 10px 10px;
-}
-
-.how-it-works > div .box .cards .card .text {
-    z-index: 2;
 }
 
 .how-it-works > div .box .cards .card .text h3 {
@@ -1167,13 +1246,13 @@ header > div > .nav .li .a:hover::before {
     margin-right: 20px;
 }
 
-.latest-events > div .box .NaN1 .count-down {
+.latest-events > div .box .count-down-box .count-down {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.latest-events > div .box .NaN1 .count-down .count {
+.latest-events > div .box .count-down-box .count-down .count {
     border: 1px solid #d4d4d4;
     width: fit-content;
     border-radius: 10px;
@@ -1183,7 +1262,7 @@ header > div > .nav .li .a:hover::before {
     transition: var(--medium-transition);
 }
 
-.latest-events > div .box .NaN1 .count-down .count .num {
+.latest-events > div .box .count-down-box .count-down .count .num {
     color: var(--main-color);
     font-size: 40px;
     font-weight: bold;
@@ -1192,27 +1271,27 @@ header > div > .nav .li .a:hover::before {
     transition: var(--medium-transition);
 }
 
-.latest-events > div .box .NaN1 .count-down .count:hover,
-.latest-events > div .box .NaN1 .count-down .count:hover .num {
+.latest-events > div .box .count-down-box .count-down .count:hover,
+.latest-events > div .box .count-down-box .count-down .count:hover .num {
     border-color: var(--main-color);
 }
 
-.latest-events > div .box .NaN1 .count-down .count span {
+.latest-events > div .box .count-down-box .count-down .count span {
     padding: 10px 5px;
     display: block;
 }
 
-.latest-events > div .box .NaN1 .text {
+.latest-events > div .box .count-down-box .text {
     text-align: center;
     margin-top: 50px;
 }
 
-.latest-events > div .box .NaN1 .text h3 {
+.latest-events > div .box .count-down-box .text h3 {
     font-size: 30px;
     margin: 20px 0;
 }
 
-.latest-events > div .box .NaN1 .text p {
+.latest-events > div .box .count-down-box .text p {
     font-size: 19px;
     color: var(--p-color);
     line-height: 1.5;
@@ -1252,6 +1331,36 @@ header > div > .nav .li .a:hover::before {
     padding: 25px;
     color: white;
     font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .latest-events > div .box img {
+        display: none;
+    }
+    .latest-events > div .box .count-down-box .count-down .count {
+        width: 70px;
+        margin: 0 auto;
+    }
+    .latest-events > div .box .count-down-box .count-down .count .num {
+        font-size: 30px;
+    }
+    .latest-events > div .box .count-down-box .count-down .count span {
+        font-size: 14px;
+    }
+    .latest-events > div .box .count-down-box .text p {
+        padding: 0 30px;
+    }
+    .latest-events > div .sub form {
+        width: 300px;
+        padding: 15px 26px;
+    }
+    .latest-events > div .sub form .email {
+        width: 100%;
+        padding: 20px;
+    }
+    .latest-events > div .sub form .submit {
+        padding: 20px;
+    }
 }
 /* End Latest Events */
 /* Start Pricing Plans */
@@ -1416,6 +1525,16 @@ header > div > .nav .li .a:hover::before {
     padding: 20px;
     margin: 10px;
 }
+
+@media (max-width: 992px) {
+    .top-videos > div .box {
+        flex-wrap: wrap;
+        margin: 0 15px;
+    }
+    .top-videos > div .box ul {
+        flex: 1;
+    }
+}
 /* End Top Videos */
 /* Start Our Awesome Stats */
 .our-awesome-stats {
@@ -1513,6 +1632,21 @@ header > div > .nav .li .a:hover::before {
     color: var(--main-color);
     margin-top: 5px;
 }
+
+@media (max-width: 768px) {
+    .our-awesome-stats > div ul li {
+        flex-basis: 100% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .our-awesome-stats > div ul {
+        flex-wrap: wrap;
+    }
+    .our-awesome-stats > div ul li {
+        flex-basis: 40%;
+    }
+}
 /* End Our Awesome Stats */
 /* Start Discount */
 .discount > div {
@@ -1554,6 +1688,7 @@ header > div > .nav .li .a:hover::before {
 
 .discount > div .request {
     width: 50%;
+    height: fit-content;
     margin: 0 auto;
     height: 90vh;
     display: flex;
@@ -1611,6 +1746,25 @@ header > div > .nav .li .a:hover::before {
     font-size: 20px;
     cursor: pointer;
 }
+
+@media (max-width: 992px) {
+    .discount > div {
+        flex-wrap: wrap;
+    }
+    .discount > div .content {
+        width: 100%;
+    }
+    .discount > div .request {
+        width: 100%;
+        padding: 50px 0;
+    }
+    .discount > div .request .form-box h2 {
+        padding: 40px 0px;
+    }
+    .discount > div .content p {
+        padding: 0 20px;
+    }
+}
 /* End Discount */
 /* Start Footer */
 footer {
@@ -1631,15 +1785,6 @@ footer > div .box-footer .contact h3 {
     font-size: 40px;
     font-weight: bold;
     margin: 60px 0 30px;
-    position: relative;
-}
-
-footer > div .box-footer .contact h3::after {
-    content: '💕';
-    position: absolute;
-    font-size: 25px;
-    transform: rotate(45deg);
-    right: -10px;
 }
 
 footer > div .box-footer .contact .social {
@@ -1740,5 +1885,42 @@ footer .creator {
     padding: 25px;
     text-align: center;
     font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    footer > div .box-footer {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    footer > div .box-footer .contact h3 {
+        text-align: center;
+    }
+    footer > div .box-footer div {
+        flex-basis: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    footer > div .box-footer .contact .social {
+        justify-content: center;
+    }
+    footer > div .box-footer .links {
+        margin-top: 0;
+    }
+    footer > div .box-footer .info .link {
+        display: block;
+    }
+    footer > div .box-footer .info .link i {
+        margin: 0 0 15px;
+    }
+    footer > div .box-footer .fot-glry {
+        margin-bottom: 30px;
+    }
+    footer > div .box-footer .fot-glry img {
+        max-width: 20%;
+    }
+}
+
+@media (max-width: 992px) {
+
 }
 /* End Footer */
