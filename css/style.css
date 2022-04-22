@@ -1538,12 +1538,11 @@ header > div > .nav .li .a:hover::before {
 /* End Top Videos */
 /* Start Our Awesome Stats */
 .our-awesome-stats {
-    background-color: #eee;
     padding: var(--sec-pad);
-    background-image: url(/image/stats.jpg);
-    background-size: cover;
     position: relative;
-    z-index: -3;
+    background-color: #eee;
+    background-image: url(../image/stats.jpg);
+    background-size: cover;
 }
 
 .our-awesome-stats::after {
@@ -1553,8 +1552,7 @@ header > div > .nav .li .a:hover::before {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #fffffff2;
-    z-index: -2;
+    background-color: #ffffffd4;
 }
 
 .our-awesome-stats > div h2 {
@@ -1562,13 +1560,14 @@ header > div > .nav .li .a:hover::before {
     margin-bottom: 50px;
     font-size: 40px;
     font-weight: bold;
+    z-index: 1;
+    position: relative;
 }
 
 .our-awesome-stats > div ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -1;
 }
 
 .our-awesome-stats > div ul li {
@@ -1581,9 +1580,7 @@ header > div > .nav .li .a:hover::before {
     text-align: center;
     width: 20%;
     position: relative;
-}
-.our-awesome-stats > div ul li:hover {
-    transform: translateX(10px);
+    z-index: 1;
 }
 
 .our-awesome-stats > div ul li::before {
@@ -1606,7 +1603,7 @@ header > div > .nav .li .a:hover::before {
     position: absolute;
     bottom: 0;
     left: 0;
-    transform: rotateY(90deg);
+    transform: rotateX(-90deg);
     transform-origin: bottom;
     transition: transform var(--medium-transition);
 }
@@ -1614,7 +1611,7 @@ header > div > .nav .li .a:hover::before {
     transform: rotateX(0deg);
 }
 .our-awesome-stats > div ul li:hover::after {
-    transform: rotateY(0deg);
+    transform: rotateX(0deg);
 }
 .our-awesome-stats > div ul li i {
     margin: 10px auto;
