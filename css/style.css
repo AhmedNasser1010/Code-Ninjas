@@ -203,6 +203,67 @@ hr {
 }
 /* -End Most Popular */
 /* End Frame Work */
+/* Start Start Warning */
+.warning {
+    position: absolute;
+    background-color: rgba(220, 128, 1, 0.16);
+    font-size: 18px;
+    border: 1px solid rgba(241, 142, 6, 0.81);
+    border-radius: 8px;
+    width: fit-content;
+    padding: 15px;
+    top: 10%;
+    left: 1%;
+    z-index: 1;
+    box-shadow: 0px 0px 2px #ffb103;
+    color: #ffb103;
+    cursor: pointer;
+    animation: warning;
+    transition: 5s;
+}
+.warning:hover {
+    background-color: #dc80013d;
+}
+.warning::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 0px;
+    width: 5px;
+    height: 30px;
+    background-color: #ffb103;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.warning .warning-icon {
+    padding-right: 10px;
+    font-size: 30px;
+}
+.warning .x-mark {
+    color: #ffb103;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.warning .warning-message span {
+    font-weight: bold;
+}
+
+.warning .warning-message a {
+    color: #c89015;
+}
+
+@keyframes warning {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+/* End Start Warning */
 /* Start Header */
 header > div {
     display: flex;
