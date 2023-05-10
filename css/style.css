@@ -220,6 +220,7 @@ hr {
     cursor: pointer;
     animation: warning;
     transition: 5s;
+    display: none;
 }
 .warning:hover {
     background-color: #dc80013d;
@@ -760,6 +761,7 @@ header > div > .nav .li .a:hover::before {
     font-size: 22px;
     font-weight: bold;
     color: #f44036;
+    overflow: hidden;
 }
 
 .features > div .feat-box .feat .footer a {
